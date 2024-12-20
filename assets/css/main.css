@@ -344,7 +344,7 @@ body {
   .hero .social-links a {
     font-size: 24px;
     display: inline-block;
-    color: color-mix(in srgb, #050d18, transparent 25%);
+    color: color-mix(in srgb, white, transparent 25%);
     line-height: 1;
     margin-right: 20px;
     transition: 0.3s;
