@@ -490,8 +490,32 @@ body {
     font-size: 14px;
   }
   
+  .resume-button .btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    text-align: center;
+  }
+
+  .resume-button .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+  }
+
+  .resume-button .btn:active {
+    background-color: #004085;
+    transform: translateY(0);
+  }
+
   /*--------------------------------------------------------------
-  # Akills
+  # Skills
   --------------------------------------------------------------*/
   .skills .progress {
     height: 60px;
