@@ -526,24 +526,17 @@ body {
   
   .skills .progress .skill {
     padding: 10px 0;
-    margin: 0px;
+    margin: 0;
     text-transform: uppercase;
-    display: flex;
-    justify-content: left; 
-    gap: 0px; 
+    display: block;
     font-weight: 600;
     font-family: "Poppins", sans-serif;
     color: #45505b;
-    white-space: nowrap; 
   }
   
   .skills .progress .skill .val {
-    margin-right: 5%;
-    font-size: 16px;
-    float: left;
+    float: right;
     font-style: normal;
-    flex-shrink: 0;
-    white-space: wrap;
   }
   
   .skills .progress-bar-wrap {
