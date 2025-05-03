@@ -610,6 +610,24 @@ body {
     background: #fff;
     border: 2px solid #0563bb;
   }
+
+  .resume .resume-item .job-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .resume .resume-item .job-title {
+    margin: 0;
+  }
+
+  .resume .resume-item .job-dates {
+    margin: 0;
+    font-weight: normal;
+    color: gray;
+  }
+
   
   /*--------------------------------------------------------------
   # Portfolio
