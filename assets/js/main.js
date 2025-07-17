@@ -167,6 +167,29 @@
         }
       })
     }
+
+    window.addEventListener("load", function () {
+      const tabs = document.querySelectorAll("#projectsTab .nav-link");
+      const panes = document.querySelectorAll(".tab-pane");
+
+      tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+          const targetId = this.getAttribute("data-tab");
+
+          // Remove active state from all tabs and panes
+          tabs.forEach(t => t.classList.remove("active"));
+          panes.forEach(p => p.classList.remove("active", "show"));
+
+          // Activate selected tab and pane
+          this.classList.add("active");
+          const targetPane = document.getElementById(targetId);
+          if (targetPane) {
+            targetPane.classList.add("active", "show");
+          }
+        });
+      });
+    });
+
   
     /**
      * Porfolio isotope and filter
