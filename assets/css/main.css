@@ -628,6 +628,12 @@ body {
     color: gray;
   }
 
+  .resume .two-columns {
+    columns: 2;          /* split into 2 columns */
+    -webkit-columns: 2;  /* Safari/Chrome */
+    -moz-columns: 2;     /* Firefox */
+  }
+
   /*--------------------------------------------------------------
   # Services
   --------------------------------------------------------------*/
