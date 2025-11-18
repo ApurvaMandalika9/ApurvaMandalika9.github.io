@@ -40,6 +40,55 @@
     }
   </style>
 
+  <style>
+    #blog {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+   #blogs p a {
+      width: 60%;
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .medium-post {
+      background: #f5f5f5; /* light grey background */
+      padding: 16px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      margin: 0 auto 24px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      width: 60%;
+    }
+
+    .medium-post h3 {
+      margin: 0 0 8px;
+      color: #333;
+    }
+
+    /* Make the title link black */
+    .medium-post h3 a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    /* Optional: add underline on hover */
+    .medium-post h3 a:hover {
+      text-decoration: underline;
+    }
+
+    .medium-post p {
+      margin: 6px 0;
+      color: #555;
+    }
+
+  </style>
+
+
+
   <!-- =======================================================
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
@@ -58,6 +107,7 @@
         <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
         <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-expand-horizontal"></i>
             <span>Projects</span></a></li>
+        <li><a href="#blogs" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Blogs</span></a></li>
         <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
@@ -483,7 +533,7 @@
               </div>
               
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black; margin-top: 2.5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>Development and Comparison of ML and DL Models for Image Classification (2024)</h4>
                   <p>Developed Random Forest (44.97% accuracy), CNN (81.1%), and ResNet (83.6%) models to evaluate
@@ -493,7 +543,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 2.5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>Multimodal Classification Model (2024)</h4>
                   <p>Implemented a fusion model combining a CNN for image data and an ANN for audio data to classify the multimodal MNIST dataset and achieved a validation
@@ -503,7 +553,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 2.5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>GPT for Text Generation (2024)</h4>
                   <p>Implemented a decoder-only Transformer model on the SCAN dataset using PyTorch. The generation model will take a command sentence as input and output the corresponding action sequence.</p>
@@ -512,7 +562,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 2.5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>Loan Eligibility Prediction Using Decision Tree and XGBoost (2024)</h4>
                   <p>Developed a predictive model to determine whether a loan should be approved based on applicant financial and demographic data.</p>
@@ -521,7 +571,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 2.5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>University Admission Prediction Using SVM (2024)</h4>
                   <p>Developed a machine learning model using Support Vector Machine (SVM) to predict a student's chances of university admission based on academic and profile-related factors.</p>
@@ -530,7 +580,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 2.5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4> PCA vs AutoEncoder (2024)</h4>
                   <p> Applied the PCA and the AutoEncoder (AE) to a collection of handwritten digit images from the USPS dataset </p>
@@ -539,7 +589,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                     <h4>[Publication] Matrix Factorization within DBMS (2018 - 2019)</h4>
                     <p>'Approximate query processing based on Matrix Factorization within DBMS', ICCCET - 19.</p>
@@ -558,7 +608,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>Augmented Reality based Video Call for Customer Support : Bot</h4>
                   <p>Developed Customer side application with automated Augmented Reality based video support for bot-like visual cues using Agora and Apple's ARKit, thus avoiding the need of a live agent for resolution.</p>
@@ -566,7 +616,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>Augmented Reality based Video Call for Customer Support : Live Agent</h4>
                   <p>Developed Customer side and Agent side iOS apps , a web-based Agent application, and a Call Scheduling Server to connect customers with available agents. An AR-based video calling (using Agora) application with interactive touch gesture rendering.</p>
@@ -574,7 +624,7 @@
               </div>
 
               <div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                <div class="icon-box" style="border: 2px solid black; margin-top: 5px;">
+                <div class="icon-box" style="border: 2px solid black;  margin-top: 5px;">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>Prediction Model</h4>
                   <p>Built a Time On Page (TOP) Prediction model for a client at [24]7.ai, increasing propensity to chat by 12%</p>
@@ -589,6 +639,22 @@
                 </div>
               </div>
           </div>
+          </section>
+
+          <section id="blogs" class="blogs">
+            <div class="container">
+              <div class="section-title">
+                <h2>My Blogs</h2>
+              </div>
+              <div id="medium-posts">
+                <p>Loading posts...</p>
+              </div>
+              <p style="width: 90%; max-width: 750px; margin: 0 auto; text-align: center;">
+                <a href="https://medium.com/@apurva.mandalika96" target="_blank" rel="noopener noreferrer" > Click to view all posts </a>
+              </p>
+            </div>
+          </section>
+
 
           <!-- ======= Contact Section ======= -->
           <section id="contact" class="contact">
@@ -699,6 +765,57 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+  <script>
+    async function loadMediumPosts() {
+      const container = document.getElementById('medium-posts');
+
+      try {
+        const rssUrl = 'https://medium.com/feed/@apurva.mandalika96'; 
+        const apiUrl =
+          'https://api.rss2json.com/v1/api.json?rss_url=' +
+          encodeURIComponent(rssUrl);
+
+        const res = await fetch(apiUrl);
+        const data = await res.json();
+
+        if (!data.items || data.items.length === 0) {
+          container.innerHTML = '<p>No posts found right now.</p>';
+          return;
+        }
+
+        // Take latest 3 posts
+        const posts = data.items.slice(0, 3);
+
+        container.innerHTML = posts.map(post => {
+          const date = new Date(post.pubDate).toLocaleDateString();
+          // Strip HTML tags from description for a clean preview
+          const preview = post.description
+            .replace(/<[^>]*>?/gm, '')
+            .slice(0, 180) + '...';
+
+          return `
+            <article class="medium-post">
+              <h3>
+                <a href="${post.link}" target="_blank" rel="noopener noreferrer">
+                  ${post.title}
+                </a>
+              </h3>
+              <p><small>${date} · Medium</small></p>
+              <p>${preview}</p>
+            </article>
+          `;
+        }).join('');
+      } catch (err) {
+        console.error(err);
+        container.innerHTML = '<p>Failed to load Medium posts.</p>';
+      }
+    }
+
+    loadMediumPosts();
+  </script>
+
 </body>
 
 </html>
