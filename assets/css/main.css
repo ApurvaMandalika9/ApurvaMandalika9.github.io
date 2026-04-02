@@ -490,7 +490,7 @@ body {
     font-size: 14px;
   }
   
-  .resume-button .btn {
+  /*.resume-button .btn {
     display: inline-block;
     padding: 12px 20px;
     background-color: #007bff;
@@ -512,6 +512,59 @@ body {
   .resume-button .btn:active {
     background-color: #004085;
     transform: translateY(0);
+  }*/
+
+  .resume-button {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .resume-dropdown-btn,
+  .resume-secondary-btn {
+    display: inline-block;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: #fff !important;
+    background-color: #0563bb;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.3s ease;
+  }
+
+  .resume-dropdown-btn:hover,
+  .resume-dropdown-btn:focus,
+  .resume-secondary-btn:hover {
+    background-color: #044a8c !important;
+    color: #fff !important;
+  }
+
+  .resume-dropdown .dropdown-menu {
+    border-radius: 10px;
+    border: 1px solid #d9e2ec;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    min-width: 250px;
+  }
+
+  .resume-dropdown .dropdown-item {
+    padding: 10px 16px;
+    font-weight: 500;
+  }
+
+  .resume-dropdown .dropdown-item:hover {
+    background-color: #f2f7fd;
+    color: #0563bb;
+  }
+
+  @media (max-width: 768px) {
+    .resume-button {
+      justify-content: center;
+    }
   }
 
   /*--------------------------------------------------------------
@@ -1013,3 +1066,165 @@ body {
     object-fit: cover; /* Ensure the image covers the entire container */
   }
   
+
+
+/* Portfolio refresh updates */
+.about .section-title > div ul li {
+  background: #ffffff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+#skillsTab {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#skillsTab .nav-link {
+  border-radius: 999px;
+  color: #45505b;
+  font-weight: 600;
+}
+
+#skillsTab .nav-link.active {
+  background-color: #0563bb;
+  color: #fff;
+  border-color: #0563bb;
+}
+
+.featured-project {
+  background: linear-gradient(180deg, #f9fbff 0%, #f5f8fc 100%);
+}
+
+.featured-project .icon i {
+  color: #0563bb;
+}
+
+.services .icon-box .btn {
+  align-self: center;
+}
+
+@media (max-width: 992px) {
+  .about .section-title > div {
+    padding: 18px !important;
+  }
+
+  .about .section-title > div ul {
+    gap: 10px !important;
+  }
+
+  .medium-post {
+    width: 85%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about .section-title > div p {
+    font-size: 16px !important;
+  }
+
+  .resume .resume-item .job-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .resume .two-columns {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+  }
+
+  .medium-post {
+    width: 100%;
+  }
+}
+
+
+/* Project tabs and hover states */
+.project-tabs {
+  margin: 0 0 30px 0;
+  gap: 10px;
+  border-bottom: none;
+}
+
+.project-tabs .nav-link {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-weight: 600;
+  color: #45505b;
+  background: #f2f3f5;
+  transition: all 0.3s ease;
+}
+
+.project-tabs .nav-link.active,
+.project-tabs .nav-link:hover {
+  background: #0563bb;
+  color: #fff;
+}
+
+.project-grid {
+  row-gap: 8px;
+}
+
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-tile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  border: 2px solid #dfe6ee !important;
+  background: #f9f9f9;
+}
+
+.project-tile:hover {
+  background: linear-gradient(135deg, #0563bb, #149ddd);
+  border-color: #0563bb !important;
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgba(5, 99, 187, 0.18);
+}
+
+.project-tile:hover h4,
+.project-tile:hover p,
+.project-tile:hover .icon i,
+.project-tile:hover a:not(.btn) {
+  color: #fff !important;
+}
+
+.project-tile .btn {
+  margin-top: 20px;
+  align-self: center;
+}
+
+.project-tile:hover .btn {
+  background-color: #fff !important;
+  color: #0563bb !important;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .project-tabs {
+    justify-content: center;
+  }
+
+  .project-tabs .nav-link {
+    margin-bottom: 8px;
+  }
+}
+
+
+/* Project filtering fix */
+.project-card.project-hidden {
+  display: none !important;
+}
+
+.project-tabs {
+  flex-wrap: wrap;
+}
+
+.featured-project.project-tile {
+  border: 2px solid #dfe6ee !important;
+  background: #f9f9f9;
+}
