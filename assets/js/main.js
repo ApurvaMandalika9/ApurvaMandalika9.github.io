@@ -1,3 +1,25 @@
+
+window.filterProjects = function(category, button) {
+  const cards = document.querySelectorAll('#projects .project-card');
+  const tabs = document.querySelectorAll('#projectTabs .nav-link');
+
+  tabs.forEach(tab => tab.classList.remove('active'));
+  if (button) button.classList.add('active');
+
+  cards.forEach(card => {
+    const categories = (card.getAttribute('data-category') || '').split(/\s+/).filter(Boolean);
+    const shouldShow = categories.includes(category);
+    card.classList.toggle('project-hidden', !shouldShow);
+  });
+};
+
+window.addEventListener('DOMContentLoaded', function() {
+  const firstTab = document.querySelector('#projectTabs .nav-link.active') || document.querySelector('#projectTabs .nav-link');
+  if (firstTab) {
+    window.filterProjects('ai', firstTab);
+  }
+});
+
 /**
 * Template Name: MyResume - v4.8.1
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
@@ -190,7 +212,6 @@
       });
     });
 
-  
     /**
      * Porfolio isotope and filter
      */
