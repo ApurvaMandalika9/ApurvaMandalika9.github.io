@@ -85,6 +85,27 @@
       color: #555;
     }
 
+    /* Web Development project cards */
+    .live-demo-cta {
+      margin-top: 40px;
+    }
+
+    .web-project-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: #fff;
+      background-color: #0563bb;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 12px;
+    }
+
+    .web-project-btn:hover {
+      color: #fff;
+      background-color: #0678e3;
+    }
+
   </style>
 
 
@@ -234,7 +255,7 @@
                 <button class="nav-link" id="software-tab" data-bs-toggle="tab" data-bs-target="#software" type="button" role="tab">Data & Analytics</button>
               </li>
               <li class="nav-item" role="presentation">
-                <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">Software & Deployment</button>
+                <button class="nav-link" id="web-tab" data-bs-toggle="tab" data-bs-target="#web" type="button" role="tab">Web & Software</button>
               </li>
             </ul>
 
@@ -261,21 +282,23 @@
               </ul>
             </div>
 
-            <div class="tab-pane fade" id="software" role="tabpanel">
-              <ul style="list-style: none; padding: 0;">
-                <li><strong>Analytics:</strong> Pandas, NumPy, Tableau, Matplotlib</li>
-                <li><strong>Data Work:</strong> Data Analysis, KPI Reporting, Forecasting, Predictive Modeling, Dashboarding</li>
-                <li><strong>Databases / Querying:</strong> SQL, PostgreSQL</li>
-                <li><strong>Business Focus:</strong> Retail Analytics, E-commerce, Hospitality, Customer Support Analytics</li>
+            <div class="tab-pane fade" id="software" role="tabpanel" aria-labelledby="ml-tab">
+              <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px;">
+                <li style="display: contents;"><strong>Analytics:</strong> <span>Pandas, NumPy, Tableau, Matplotlib</span></li>
+                <li style="display: contents;"><strong>Data Work:</strong> <span>Data Analysis, KPI Reporting, Forecasting, Predictive Modeling, Dashboarding</span></li>
+                <li style="display: contents;"><strong>Databases / Querying:</strong> <span>SQL, PostgreSQL</span></li>
+                <li style="display: contents;"><strong>Business Focus:</strong> <span>Retail Analytics, E-commerce, Hospitality, Customer Support Analytics</span></li>
               </ul>
             </div>
 
-            <div class="tab-pane fade" id="web" role="tabpanel">
-              <ul style="list-style: none; padding: 0;">
-                <li><strong>Backend:</strong> FastAPI, Flask, REST APIs</li>
-                <li><strong>Frontend / Apps:</strong> Streamlit, React.js</li>
-                <li><strong>Developer Tools:</strong> Docker, Git, GitHub, API Integration</li>
-                <li><strong>Languages:</strong> Java, JavaScript, Swift, Ruby</li>
+            <div class="tab-pane fade" id="web" role="tabpanel" aria-labelledby="ml-tab">
+              <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: max-content 1fr; gap: 8px 16px;">
+                <li style="display: contents;"><strong>Frontend / Apps:</strong> <span>HTML, CSS, JavaScript, Vue.js, Chart.js, Streamlit, React.js</span></li>
+                <li style="display: contents;"><strong>Backend:</strong> <span>Node.js, Express, Ruby on Rails, FastAPI, Flask, REST APIs</span></li>
+                <li style="display: contents;"><strong>Databases:</strong> <span>SQLite, PostgreSQL, MySQL</span></li>
+                <li style="display: contents;"><strong>Auth & Integrations:</strong> <span>Session-based auth, bcrypt password hashing, Calendly, third-party API integration</span></li>
+                <li style="display: contents;"><strong>Deployment & Tools:</strong> <span>Docker, Git, GitHub, API Integration, GitHub Pages</span></li>
+                <li style="display: contents;"><strong>Languages:</strong> <span>JavaScript, C, Python, Ruby, Java, Swift</span></li>
               </ul>
             </div>
           </div>
@@ -297,7 +320,7 @@
           <p>Skills I bring to the table:</p>
         </div>
 
-        <div class="row skills-content d-flex justify-content-center">
+        <div class="row skills-content d-flex justify-content-center gy-5">
 
           <div class="col-lg-1 text-center">
             <div class="progress">
@@ -375,7 +398,7 @@
             <div class="progress">
                 <span class="skill"><i class="fas fa-cube fa-3x"></i> ARKit </span>
             </div>
-          </div>
+          </div> -->
 
           <div class="col-lg-1 text-center">
             <div class="progress">
@@ -388,13 +411,25 @@
               <span class="skill"><i class="fab fa-java fa-3x"></i> Java </span>
             </div>
           </div>
+
+          <div class="col-lg-1 text-center">
+            <div class="progress">
+                <span class="skill"><i class="fab fa-js fa-3x"></i> JavaScript </span>
+            </div>
+          </div>
+
+          <div class="col-lg-1 text-center">
+            <div class="progress">
+              <span class="skill"><i class="fab fa-node-js fa-3x"></i> Node.js </span>
+            </div>
+          </div>
           
           <div class="col-lg-1 text-center">
             <div class="progress">
               <span class="skill"><i class="fas fa-gem fa-3x"></i> Ruby on Rails </span>
             </div>
           </div>
-          --->
+          
           <div class="col-lg-1 text-center">
             <div class="progress">
               <span class="skill"><i class="fas fa-signal fa-3x"></i> Tableau </span>
@@ -578,7 +613,7 @@
 
         <div class="section-title">
           <h2>Projects</h2>
-          <p>Selected projects in AI, machine learning, analytics, and applied data systems.</p>
+          <p>Selected projects in AI, machine learning, analytics, applied data systems, and web development.</p>
         </div>
 
         <ul class="nav nav-tabs justify-content-center project-tabs" id="projectTabs" role="tablist">
@@ -593,6 +628,9 @@
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" type="button" onclick="filterProjects('cv', this)">Computer Vision</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" type="button" onclick="filterProjects('web', this)">Web Development</button>
           </li>
         </ul>
 
@@ -640,7 +678,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card" data-category="da ds">
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card" data-category="da ds web">
                 <div class="icon-box project-tile">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
                   <h4>VitaFin: A Personal Health and Financial Data Visualization Dashboard (2025)</h4>
@@ -734,6 +772,48 @@
                 </div>
               </div>
 
+              <!-- ======= Web Development projects ======= -->
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card project-hidden" data-category="web">
+                <div class="icon-box featured-project project-tile">
+                  <div class="icon"><i class="bx bx-calendar-check"></i></div>
+                  <h4>Open Slot: Full-Stack Booking App (2026)</h4>
+                  <p>Built a full-stack appointment booking app for a demo wellness studio using Node.js, Express, SQLite (better-sqlite3), and bcryptjs, with cookie-based admin authentication, double-booking prevention, live slot availability, and a day-timeline scheduling UI.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card project-hidden" data-category="web">
+                <div class="icon-box featured-project project-tile">
+                  <div class="icon"><i class="bx bx-store"></i></div>
+                  <h4>Boutique E-commerce Storefront (2026)</h4>
+                  <p>Built a responsive boutique storefront in HTML, CSS, and JavaScript, paired with a client-side inventory reconciliation dashboard that uses fuzzy SKU matching to flag duplicate and mismatched products across sales channels.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card project-hidden" data-category="web">
+                <div class="icon-box featured-project project-tile">
+                  <div class="icon"><i class="bx bx-message-rounded-dots"></i></div>
+                  <h4>AnswerBar: AI FAQ Widget (2026)</h4>
+                  <p>Designed an embeddable AI FAQ widget as a standalone product with its own landing page and a working demo mode, with a documented backend design for answering visitor questions through the Claude API.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card project-hidden" data-category="web">
+                <div class="icon-box project-tile">
+                  <div class="icon"><i class="bx bx-plus-medical"></i></div>
+                  <h4>Steady Hands CPR &amp; First Aid Website (2026)</h4>
+                  <p>Built a responsive small-business website for a demo CPR and first aid training provider, with course listings and Calendly integration so visitors can book classes directly from the site.</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 project-card project-hidden" data-category="web">
+                <div class="icon-box project-tile">
+                  <div class="icon"><i class="bx bx-data"></i></div>
+                  <h4>Data Management Application for TAMU School of Dentistry (2023)</h4>
+                  <p>Developed a Ruby on Rails data management application for the Texas A&amp;M School of Dentistry's Sealants Outreach Program, digitizing data collection and entry and eliminating paper forms. Featured in the department's <a href="https://insights.dentistry.tamu.edu/going-digital/" target="_blank" rel="noopener noreferrer">Going Digital</a> article.</p>
+                  <a href="https://github.com/ApurvaMandalika9/DataManagementApplicationForDentistry" class="btn" style="display:inline-block; padding:10px 20px; font-size:14px; color:#fff; background-color:#0563bb; text-decoration:none; border-radius:5px; margin-top: 20px;">Git Repo</a>
+                </div>
+              </div>
+
               <!--<div class="col-lg-2 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
                 <div class="icon-box project-tile">
                   <div class="icon"><i class="bx bx-expand-horizontal"></i></div>
@@ -786,6 +866,11 @@
               </div>
             -->
           </div>
+
+          <div class="text-center live-demo-cta">
+            <a href="#contact" class="btn web-project-btn scrollto">For live demos, contact me</a>
+          </div>
+          </div>
           </section>
 
           <section id="blogs" class="blogs">
@@ -818,7 +903,7 @@
                     <div class="address">
                       <i class="bi bi-geo-alt"></i>
                       <h4>Location:</h4>
-                      <p>College Station, TX, US</p>
+                      <p>India</p>
                     </div>
 
                     <div class="email">
@@ -830,7 +915,7 @@
                     <div class="phone">
                       <i class="bi bi-phone"></i>
                       <h4>Call:</h4>
-                      <p> +1 (979) 739-6155</p>
+                      <p> +91 8328030318</p>
                     </div>
 
                   </div>
